@@ -1,0 +1,57 @@
+.colormain{
+  background-color: #f1f4a3;
+}
+
+.container {
+  display: table;
+  background-color: #c8ed66;
+  height: 85vh;
+  padding-bottom: 75px;
+}
+
+.textArticle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding-top: 90px;
+}
+
+.textDribniy {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 2rem;
+  background-color: #173e04;
+  color: #f1f4a3;
+  border: none;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.btn:hover {
+  transition: 0.3s;
+  background-color: #378d0c;
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.45s ease-out;
+}
+
+.btn:hover::before {
+  width: 100%;
+}

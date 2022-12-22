@@ -1,0 +1,56 @@
+.container {
+  display: table;
+  background-color: #c8ed66;
+  height: 85vh;
+  padding-bottom: 75px;
+}
+
+.Tyubik{
+  text-decoration: none;
+  color: #f1f4a3;
+  transition: 0.3s;
+}
+
+.Tyubik:hover{
+  color: pink;
+  transition: 0.3s;
+}
+
+
+.textArticle {
+  margin-top: -50px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.textDribniy {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.Fotka {
+  width: 100%;
+  position: relative;
+}
+
+.Cards {
+  background-color: #173e04;
+  color: #f1f4a3;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Shadow {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.textTeam {
+  margin-top: -40px;
+  margin-bottom: -20px;
+}
+
+.container1{
+  margin-bottom: 25px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
