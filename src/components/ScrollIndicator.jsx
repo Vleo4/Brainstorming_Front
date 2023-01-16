@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "..//styles/ScrollIndicator.css";
 import {faArrowUp} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const ScrollIndicator = () => {
@@ -27,7 +28,7 @@ const ScrollIndicator = () => {
     <>
       {showScroll && (
         <div className="scrollTop" onClick={scrollTop}>
-          <i className="fa fa-arrow-up"></i>
+          <FontAwesomeIcon icon={faArrowUp} className="scroll-icon"/>
         </div>
       )}
     </>

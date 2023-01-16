@@ -9,7 +9,7 @@
     right: 20px;
     background: #0077cc;
     color: #fff;
-    padding: 10px 15px;
+    padding: 10px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -24,6 +24,7 @@
     opacity: 1;
   }
   
-  .fa-arrow-up {
-    font-size: 20px;
+  .scroll-icon{
+    width: 20px;
+    height: 20px;
   }
