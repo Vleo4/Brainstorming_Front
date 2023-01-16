@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.team-container {
+  display: flex;
+  background-color: #a8da80;
+  height: 100%;
+  flex-direction: column;
+}
+
+.dark-theme .team-container {
+  background-color: #292b2f;
+}
+
+.team-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.team-article {
+  margin-top: 180px;
+  align-self: center;
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.04; /* 67px/64 */
+  color: #001409;
+}
+
+.dark-theme .team-article {
+  color: #fafafa;
+}
+
+.team-content-container {
+  display: flex;
+  margin-top: 60px;
+  align-items: center;
+}
+
+.team-card {
+  width: 350px;
+  height: 500px;
+  background: #bddca4;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-theme .team-card {
+  background: #124d77;
+}
+
+.team-card-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-card-photo {
+  width: 350px;
+  height: 500px;
+  padding: 10px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.team-text-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 75px;
+}
+
+.team-text-name {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.05; /* 42px/40 */
+  color: #001409;
+}
+
+/*-----------ПАСХАЛКА---------------*/
+.Tyubik {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.Tyubik:hover {
+  transition: 0.5s;
+  color: #ff0000;
+}
+
+.dark-theme .Tyubik:hover {
+  color: #ff0000;
+}
+/*------------------------------------*/
+.dark-theme .team-text-name {
+  color: #fafafa;
+}
+
+.team-position {
+  margin-top: 5px;
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.04; /* 25px/24 */
+  color: #001409;
+}
+
+.dark-theme .team-position {
+  color: #fafafa;
+}
+
+.team-text {
+  display: flex;
+  margin-top: 20px;
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.04; /* 25px/24 */
+  color: #001409;
+  max-width: 700px;
+  text-align: justify;
+  
+}
+
+.dark-theme .team-text {
+  color: #fafafa;
+}
+
+.last {
+  margin-bottom: 250px;
+}
+
+@media (max-width: 1037px) {
+  .team-wrapper {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 910px) {
+  .team-article {
+    font-size: 52px;
+  }
+  .team-card,
+  .team-card-photo {
+    width: 250px;
+    height: 400px;
+  }
+  .team-text-name {
+    font-size: 28px;
+  }
+
+  .team-position {
+    font-size: 24px;
+  }
+
+  .team-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-wrapper {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+  .team-text-content {
+    margin-left: 45px;
+  }
+}
+
+@media (max-width: 665px) {
+  .team-article {
+    margin-top: 120px;
+  }
+
+  .team-card,
+  .team-card-photo {
+    width: 300px;
+    height: 450px;
+  }
+
+  .team-content-container {
+    flex-direction: column;
+  }
+  .team-text-content {
+    margin-left: 0;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .team-position {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .team-text-name {
+    text-align: center;
+  }
+  .team-text {
+    text-align: justify;
+  }
+  .last {
+    margin-bottom: 250px;
+  }
+}
+
+@media (max-width: 470px) {
+  .team-article {
+    font-size: 36px;
+    text-align: center;
+  }
+  .team-card,
+  .team-card-photo {
+    width: 250px;
+    height: 400px;
+  }
+  .team-text-name {
+    font-size: 24px;
+  }
+
+  .team-position {
+    font-size: 20px;
+  }
+
+  .team-text {
+    font-size: 18px;
+    
+  }
+}
+
+@media (max-width: 340px) {
+  .team-card,
+  .team-card-photo {
+    width: 200px;
+    height: 350px;
+  }
+  .team-text-name {
+    font-size: 24px;
+  }
+
+  .team-position {
+    font-size: 20px;
+  }
+
+  .team-text {
+    font-size: 18px;
+    text-align: center;
+  }
+}

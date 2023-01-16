@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-container {
+  display: flex;
+  background-color: #a8da80;
+  height: 100%;
+  flex-direction: column;
+}
+
+.dark-theme .about-container {
+  background-color: #292b2f;
+}
+
+.about-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 120px;
+  margin-right: 120px;
+  background-color: #bddca4;
+}
+
+.dark-theme .about-content-container {
+  background-color: #124d77;
+}
+
+.first {
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  /*border-radius: 0px 0px 50px 50px;*/
+  border-radius: 50px;
+  margin-top: 120px;
+}
+
+.second,
+.third {
+  margin-top: 70px;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+.third {
+  margin-bottom: 70px;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-bottom: 75px;
+}
+
+.about-article {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.04; /* 67px/64 */
+  color: #001409;
+  text-align: center;
+}
+
+.dark-theme .about-article {
+  color: #fafafa;
+}
+
+.about-subtitle {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.05; /* 42px/40 */
+  color: #001409;
+  text-align: center;
+}
+
+.dark-theme .about-subtitle {
+  color: #fafafa;
+}
+
+.subtitle-wrapper {
+  display: flex;
+}
+
+.first-subtitle {
+  margin-top: 50px;
+}
+
+.second-subtitle,
+.third-subtitle {
+  margin-top: 15px;
+}
+
+.about-text {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.04; /* 25px/24 */
+  color: #001409;
+  margin-top: 50px;
+  text-align: justify;
+}
+
+.dark-theme .about-text {
+  color: #fafafa;
+}
+
+.expand-text {
+  align-self: center;
+  display: flex;
+  margin-top: 60px;
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.05; /* 21px/20 */
+  color: #ffffff;
+  background: #001409;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.dark-theme .expand-text {
+  color: #001409;
+  background: #fafafa;
+}
+
+@media (max-width: 1037px) {
+  .about-content-container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .about-article {
+    font-size: 48px;
+  }
+  .about-subtitle {
+    font-size: 30px;
+  }
+  .about-text {
+    font-size: 20px;
+  }
+  .about-wrapper {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content-container {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  .about-article {
+    font-size: 42px;
+  }
+  .about-subtitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 470px) {
+  .about-content-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .about-article {
+    font-size: 36px;
+  }
+  .about-subtitle {
+    font-size: 24px;
+  }
+  .about-text {
+    font-size: 18px;
+  }
+  .about-wrapper {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .second,
+  .third {
+    margin-top: 30px;
+  }
+  .first-subtitle {
+    margin-top: 20px;
+  }
+
+  .second-subtitle,
+  .third-subtitle {
+    margin-top: -20px;
+  }
+  .about-text {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 335px) {
+  .about-content-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .about-article {
+    font-size: 32px;
+  }
+  .about-subtitle {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  color: #fff;
+  padding: 0 120px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+
+  transition: 0.5s;
+}
+
+/*--------------ЗМІНА СТИЛЮ ПРИ ПЕРЕХОДІ НА ІНШУ СТОРІНКУ-----------------*/
+.navbar.white-bg {
+  background: rgba(255, 255, 255, 0.000001);
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+}
+
+.navbar.white-bg .navbar-item {
+  color: #001409;
+}
+
+.navbar.white-bg .navbar-item:hover {
+  color: #fff;
+}
+
+.navbar.white-bg .navbar-icon {
+  color: #001409;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.navbar.white-bg .navbar-icon:hover {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.navbar.white-bg .navbar-logo {
+  filter: invert(100%);
+  transition: 0.5s;
+}
+
+.navbar.white-bg .navbar-logo:hover {
+  transition: 0.5s;
+  filter: invert(0%);
+}
+
+.navbar.white-bg.navbar-burger-icon {
+  color: #001409;
+}
+
+.navbar.white-bg .navbar-burger-icon {
+  color: #001409;
+}
+
+/*--------------ТЕМНА ТЕМА-----------------*/
+
+.dark-theme .navbar.white-bg .navbar-item {
+  color: #fff;
+}
+
+.dark-theme .navbar.white-bg .navbar-item:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.dark-theme .navbar.white-bg .navbar-icon {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.dark-theme .navbar.white-bg .navbar-icon:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.dark-theme .navbar.white-bg .navbar-logo {
+  filter: none;
+  transition: 0.5s;
+}
+
+.dark-theme .navbar.white-bg .navbar-logo:hover {
+  transition: 0.5s;
+  filter: brightness(0.75);
+}
+
+.dark-theme .navbar.white-bg.navbar-burger-icon {
+  color: #fff;
+}
+
+.dark-theme .navbar.white-bg .navbar-burger-icon:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/*-----------------------------------------*/
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-right {
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.navbar-item {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 30px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  row-gap: 3px;
+  transition: 0.5s;
+}
+
+.navbar-item:hover {
+  color: rgba(255, 255, 255, 0.75);
+  transition: 0.5s;
+}
+
+.navbar-logo {
+  width: 100px;
+  height: 80px;
+  transition: filter 0.5s;
+}
+
+.navbar-logo:hover {
+  filter: brightness(0.75);
+  transition: filter 0.5s;
+}
+
+.navbar-icon {
+  height: 35px;
+  width: 35px;
+  color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-icon:hover {
+  color: rgba(255, 255, 255, 0.75);
+  transition: 0.5s;
+}
+
+.navbar-burger {
+  display: none;
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  right: 70px;
+}
+
+.navbar-burger-icon {
+  height: 50px;
+  width: 50px;
+  transition: 0.5s;
+}
+
+.navbar-burger-icon:hover {
+  color: rgba(255, 255, 255, 0.75);
+  transition: 0.5s;
+}
+
+/*-------------ЗМІНА КОЛЬОРУ ПРИ СКРОЛІ---------------*/
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.000001);
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+}
+
+.navbar.scrolled .navbar-item {
+  color: #001409;
+}
+
+.navbar.scrolled .navbar-icon {
+  color: #001409;
+}
+
+.navbar.scrolled .navbar-logo {
+  filter: invert(100%);
+  transition: filter 0.5s;
+}
+
+.navbar.scrolled .navbar-burger-icon {
+  color: #001409;
+}
+
+/*-------------ТЕМНА ТЕМА ДЛЯ СКРОЛУ---------------*/
+
+.dark-theme .navbar.scrolled .navbar-item {
+  color: #fff;
+}
+
+.dark-theme .navbar.scrolled .navbar-item:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.dark-theme .navbar.scrolled .navbar-icon {
+  color: #fff;
+}
+
+.dark-theme .navbar.scrolled .navbar-icon:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.dark-theme .navbar.scrolled .navbar-logo {
+  filter: none;
+  transition: filter 0.5s;
+}
+
+.dark-theme .navbar.scrolled .navbar-logo:hover {
+  transition: 0.5s;
+  filter: brightness(0.75);
+}
+
+.dark-theme .navbar.scrolled .navbar-burger-icon {
+  color: #fff;
+}
+
+.dark-theme .navbar.scrolled .navbar-burger-icon:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/*------------------------ТЕМНА ТЕМА ПРОСТО-------------------------*/
+
+.dark-theme .navbar .navbar-icon:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/*------------------------------------------------------------------*/
+
+@media (max-width: 1165px) {
+  .left-col {
+    text-align: left;
+  }
+  .right-col {
+    text-align: right;
+  }
+  .right-col,
+  .left-col {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1037px) {
+  .navbar {
+    padding: 0 90px;
+  }
+}
+
+@media (max-width: 910px) {
+  .navbar-item {
+    font-size: 20px;
+    margin: 0 15px;
+  }
+  .navbar-icon {
+    height: 20px;
+    width: 20px;
+  }
+  .navbar-logo {
+    width: 80px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar.white-bg,
+  .navbar.scrolled {
+    background: none;
+    backdrop-filter: none;
+  }
+  .navbar-menu {
+    display: flex;
+  }
+  .navbar-center {
+    display: none;
+  }
+  .navbar-burger {
+    display: block;
+  }
+  .navbar-right > .icon-moon {
+    display: none;
+  }
+  .navbar-left {
+    display: none;
+  }
+  .icon-profile {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    left: 70px;
+  }
+  .navbar-icon {
+    margin: 0;
+  }
+  .navbar {
+    padding: 0 70px;
+  }
+}
+
+.navbar-menu {
+  z-index: 1001;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  transform: translateX(-500%);
+  transition: transform 0.3s ease-in-out;
+  padding: 0 20px;
+  display: flex;
+  overflow-y: scroll;
+
+  -ms-overflow-style: none; /* Для Internet Explorer */
+  scrollbar-width: none; /* Для Firefox */
+}
+
+.navbar-menu::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent; /* Для Chrome/Safari */
+}
+
+.navbar-menu.is-active {
+  display: block;
+  transform: translateX(0);
+}
+
+.burger-item {
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: 25px 0;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  position: relative;
+}
+
+.profile-burger {
+  height: 35px;
+  width: 35px;
+  color: #fff;
+  margin-right: 10px;
+  position: absolute;
+  left: 35px;
+  transition: 0.5s;
+}
+
+.profile-burger:hover {
+  color: rgba(255, 255, 255, 0.75);
+  transition: 0.5s;
+}
+
+.special-item {
+  cursor: pointer;
+}
+
+@media (max-width: 470px) {
+  .hide-text {
+    display: none;
+  }
+  .profile-burger {
+    position: static;
+    margin: 0;
+  }
+  .special-item {
+    padding: 19px;
+  }
+  .navbar-burger {
+    right: 20px;
+  }
+  .icon-profile {
+    left: 20px;
+  }
+}

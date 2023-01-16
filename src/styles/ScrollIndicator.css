@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0077cc;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  .scrollTop:hover {
+    opacity: 1;
+  }
+  
+  .fa-arrow-up {
+    font-size: 20px;
+  }
