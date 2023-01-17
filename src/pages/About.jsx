@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "..//styles/About.css";
+import ScrollIndicator from "../components/ScrollIndicator";
 
 const About = () => {
   const [showText, setShowText] = useState(
@@ -27,6 +28,7 @@ const About = () => {
 
   return (
     <div>
+      <ScrollIndicator/>
       <div className="about-container">
         <div className="about-content-container first">
           <div className="about-wrapper">

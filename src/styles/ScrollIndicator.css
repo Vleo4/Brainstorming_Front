@@ -1,30 +1,65 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scroll-icon {
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fefefe;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  color: #000000;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+
+  transition: all 0.5s ease-in-out;
+  transform: translateY(100%);
+}
+
+.scroll-icon.visible {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
   }
-  .scrollTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #0077cc;
-    color: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    opacity: 0.7;
-    transition: all 0.3s ease;
+  100% {
+    transform: translateY(0);
   }
-  
-  .scrollTop:hover {
-    opacity: 1;
-  }
-  
-  .scroll-icon{
-    width: 20px;
-    height: 20px;
-  }
+}
+
+.scroll-icon.visible {
+  animation: slide-up 0.2s ease-in-out;
+  visibility: visible;
+}
+
+.scroll-icon:hover {
+  background: rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+
+.dark-theme .scroll-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.dark-theme .scroll-icon:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}

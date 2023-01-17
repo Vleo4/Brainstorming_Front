@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "..//styles/OurTeam.css";
 import Photo from "..//assets/Unknown.png";
+import ScrollIndicator from "../components/ScrollIndicator";
 
 const OurTeam = () => {
   useEffect(() => {
@@ -12,6 +13,7 @@ const OurTeam = () => {
 
   return (
     <div>
+      <ScrollIndicator/>
       <div className="team-container">
         <div className="team-wrapper">
           <h1 className="team-article">OUR TEAM</h1>

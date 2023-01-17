@@ -1,38 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import "..//styles/ScrollIndicator.css";
-import {faArrowUp} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ScrollIndicator = () => {
-    const [showScroll, setShowScroll] = useState(false);
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      document.body.classList.add("dark-theme");
+    }
+  }, []);
 
-  const checkScrollTop = () => {
-    if (!showScroll && window.pageYOffset > 768) {
-      setShowScroll(true);
-    } else if (showScroll && window.pageYOffset <= 768) {
-      setShowScroll(false);
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300) {
+      setVisible(true);
+    } else if (scrolled <= 300) {
+      setVisible(false);
     }
   };
 
-  const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", checkScrollTop);
-    return () => window.removeEventListener("scroll", checkScrollTop);
-  }, []);
+  window.addEventListener("scroll", toggleVisible);
 
   return (
-    <>
-      {showScroll && (
-        <div className="scrollTop" onClick={scrollTop}>
-          <FontAwesomeIcon icon={faArrowUp} className="scroll-icon"/>
-        </div>
-      )}
-    </>
-  );  
-}
+    <div>
+      <FontAwesomeIcon
+        icon={faArrowUp}
+        onClick={scrollToTop}
+        style={{ display: visible ? "inline" : "none" }}
+        className={`scroll-icon ${visible ? "visible" : ""}`}
+      />
+    </div>
+  );
+};
 
-export default ScrollIndicator
+export default ScrollIndicator;

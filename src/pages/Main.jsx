@@ -1,24 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../styles/Main.css";
 import GoogleIcon from "@mui/icons-material/Google";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LogoPhoto from "..//assets/logo.svg";
 import SwiperDiv from "../components/Swiper";
-
-import BootstrapSwitchButton from "bootstrap-switch-button-react";
-import Poxuy from "..//assets/photo_2022-12-19_22-44-37.jpg";
 import ScrollIndicator from "../components/ScrollIndicator";
 const Main = () => {
-  /*-------------------------------------------------------*/ 
-  const [showModal, setShowModal] = useState(
-    JSON.parse(localStorage.getItem("showModal")) || false
-  );
-
-  const handleModal = () => {
-    setShowModal(!showModal);
-    localStorage.setItem("showModal", JSON.stringify(!showModal));
-  };
-  /*-------------------------------------------------------*/ 
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -29,88 +16,7 @@ const Main = () => {
 
   return (
     <div className="main">
-      <ScrollIndicator/>
-
-
-
-
-      {showModal && (
-        <div className="modal">
-          <div className="modal-container">
-            <div className="modal-content">
-              <p className="modal-text">Additional elements go here</p>
-              <div className="switch-buttons">
-                <div className="first-col">
-                  <div className="switch-button-item">
-                    <p className="switch-text">SETTING #1</p>
-                    <BootstrapSwitchButton
-                      checked={false}
-                      width={100}
-                      onstyle="success"
-                      offstyle="dark"
-                      style="border"
-                      onlabel="ON"
-                      offlabel="OFF"
-                      onChange={(checked) => {
-                        this.setState({ isUserAdmin: checked });
-                      }}
-                    />
-                  </div>
-                  <div className="switch-button-item">
-                    <p className="switch-text">SETTING #2</p>
-                    <BootstrapSwitchButton
-                      checked={false}
-                      width={100}
-                      onstyle="success"
-                      offstyle="dark"
-                      style="border"
-                      onlabel="ON"
-                      offlabel="OFF"
-                      onChange={(checked) => {
-                        this.setState({ isUserAdmin: checked });
-                      }}
-                    />
-                  </div>
-                  <div className="switch-button-item">
-                    <p className="switch-text">SETTING #3</p>
-                    <BootstrapSwitchButton
-                      checked={false}
-                      width={100}
-                      onstyle="success"
-                      offstyle="dark"
-                      style="border"
-                      onlabel="ON"
-                      offlabel="OFF"
-                      onChange={(checked) => {
-                        this.setState({ isUserAdmin: checked });
-                      }}
-                    />
-                  </div>
-                </div>
-                <div className="second-col">
-                  <img
-                    src={Poxuy}
-                    alt=""
-                    width={200}
-                    height={200}
-                    className="poxuy-gif"
-                  />
-                </div>
-              </div>
-
-              <button className="modal-button-close" onClick={handleModal}>
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-      
-
-
-
-
-
+      <ScrollIndicator />
 
       <div className="container-main">
         <div className="container-content">
@@ -125,7 +31,7 @@ const Main = () => {
               </p>
             </div>
             <div className="getstarted-wrapper">
-              <a href="#" className="get-started" onClick={handleModal}>
+              <a href="#" className="get-started">
                 Get started
               </a>
             </div>
